@@ -1,0 +1,185 @@
+h1, h2, h3 {
+  font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+}
+
+h1 { font-size: 2.5rem; }
+h2 {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+h3 { font-size: 1.5rem; }
+
+.header {
+  background: #002042;
+  color: #fff;
+  padding: 2rem 2rem 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stamp {
+  background: #FFC526;
+  border-radius: 6px;
+  height: 1rem;
+  line-height: 1rem;
+  color: #000;
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+}
+
+.buy {
+  background: #FFC526;
+  margin: -4rem 2rem 5rem 2rem;
+  padding: 1rem 4rem;
+  border-radius: 6px;
+}
+
+.items {
+  display: flex;
+  overflow: hidden;
+}
+
+.card {
+  flex-shrink: 0;
+  display: inline-block;
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 6px;
+  background: #EFEFEF;
+  margin: 1rem;
+  transition: transform 0.3s ease-out;
+}
+
+.img {
+  height: 7.5rem;
+  width: 10rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  background: #002042;
+  color: #fff;
+  width: 7rem;
+  text-align: center;
+  right: -.4rem;
+  top: -.4rem;
+  position: absolute;
+  border-radius: 6px;
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.name {  margin-left: 0.5rem; }
+
+.price {
+  margin-right: 0.5rem;
+  font-weight: 500;
+  float: right;
+  color: #002042;
+}
+
+.buy .card { background: #fff; }
+
+.card.buyable { cursor: pointer; }
+.card.buyable:hover {
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
+  transform: scale(1.05);
+}
+
+.yours { margin: 0 6rem; }
+
+button {
+  margin: 0 auto;
+  background: #002042;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 3rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+button:hover { background: #003C7C; }
+
+button.inline {
+  display: inline-block;
+  background: #ddd;
+  color: #000;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+}
+
+.disclaimer {
+  font-size: 0.7rem;
+  color: #666;
+  margin: 5rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.dialog-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.dialog {
+  position: fixed;
+  background: #fff;
+  padding: 1rem 2rem;
+  top: 5rem;
+  left: calc(50% - 20rem);
+  right: calc(50% - 20rem);
+  border-radius: 6px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.25);
+}
+
+label {
+  margin-right: 1rem;
+  width: 4rem;
+  display: inline-block;
+}
+
+.flip:hover {
+  transition: transform 0.4s 0.2s ease-in-out;
+  transform: rotate(360deg);
+}
+
+.info {
+  margin: 2rem;
+  text-align: center;
+}
+
+input {
+  font-size: 1em;
+  width: 10rem;
+}
+
+.initing {
+  display: block;
+  border-radius: 6px;
+  background: #EFEFEF;
+  padding: 1rem;
+}
+
+.forSale {
+  position: absolute;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 1rem 0;
+  top: 28%;
+  left: 10%;
+  width: 80%;
+  transform: rotate(-15deg);
+}
