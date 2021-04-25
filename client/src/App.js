@@ -32,7 +32,7 @@ class App extends Component {
       const deployedNetwork = MerchToken.networks[networkId];
       const instance = new web3.eth.Contract(
         MerchToken.abi,
-        deployedNetwork && deployedNetwork.address,
+        "0xb661b9C12A5747A9e89AC1AE30f01F0d864144D6"
       );
       
       window.contract = instance;

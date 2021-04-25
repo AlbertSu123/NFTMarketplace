@@ -1,0 +1,18 @@
+How is web3 used in componentDidMount? How does the user connect to the blockchain network? This is metamask!
+web3 gets the state of the local blockchain and all important info that we need(accounts, network, etc.). The user connects via metamask and web3
+
+pick one function: fetchLoot, addLoot, or buyLoot and explain in detail what it is doing and how it works. Every line please!
+buyLoot = (ev) => {
+const { contract, accounts } = this.state; //This gets the contract and accounts objects so we can interact with it later in the function
+ev.preventDefault(); //This is a javascript function that checks if the event is not explicitly handled, then it's default action should not be taken-mozilla
+this.setState({ loading: true });//Set the loading state to true
+contract.methods.buyToken(this.state.buying.id).send( //This calls the buyToken method with the msg.sender being accounts[0] and the msg.value being the price and the _tokenId being the id in state
+    { from: accounts[0], value: this.state.buying.price }
+).then(() => this.fetchLoot()).then(() => { //This calls calls fetchLoot to change some state variables
+    this.setState({ buying: null }); //Change out of buying into a different state on the frontend
+}, (err) => {
+    console.error(err); //Error checking
+    alert('Creating the token faile!'); //Creating error alert
+    this.setState({ buying: null }); //Change state to null on frontend since we are no longer buying.
+})
+}
